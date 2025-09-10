@@ -1,0 +1,74 @@
+/* 百度网盘图片（下层） */
+.imgSize {
+display:block;
+  width: 400px;
+  position: absolute; /* 绝对定位 */
+  z-index: 1;        /* 层级低于 GIF */
+  margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* GIF 动图（上层） */
+.boomImg {
+  width: 1500px;       /* 与下层图片同宽 */
+  height:1000px;
+  position: absolute; /* 绝对定位 */
+  z-index: 2;         /* 层级高于百度网盘图片 */
+  display:none;
+
+}
+
+#reLife{
+    display:none;
+}
+#Life{
+    display:none;
+
+}
+
+.boxPosition{
+position:absolute;
+left:50%;
+top:50%;
+transform: translate(-50%, -50%); /* 向左上方回移自身宽高的 50% */
+display:flex;
+  align-items:center;
+  justify-content:center;
+}  
+
+body{
+    margin:0px;
+    min-height:100vh;
+    position:relative;/*相对定位*/
+}
+
+
+button{
+  display:flex;
+  position:absolute;
+  left:50%;
+  transform: translate(-50%,-50%);
+  align-items:center;
+  justify-content:center;
+  width:100px;
+  height:40px;
+  border:none;
+  border-radius:4px;
+  background-color: blue;
+  color:aliceblue;
+  text-align:center;
+  cursor:pointer;
+  margin-top:420px;
+  z-index:1;
+
+}
+
+
+button[style*="blue"]:hover{
+    background-color: red !important;
+}
+/* 复活按钮悬停 */
+button[style*="rgb(77, 222, 77)"]:hover {
+  background-color: green !important;
+}
+
